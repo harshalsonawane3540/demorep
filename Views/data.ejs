@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li id="myli1"></li>
+            <li id="myli2"></li>
+            <li id="myli3"></li>
+        </ul>
+    </div>
+</body>
+<script>
+    if(localStorage.getItem('cart')==null)
+    {
+       var cart = {};//create a javascript cart variable
+    }
+    else{
+        cart = json.parse(localstorage.getItem('cart'))
+    }
+</script>
+</html>
+for(i in cart)
+{
+    name=cart[i][1]+"<br/>"
+    $("#myli1").append(name)
+
+    qty = cart[i][0] + "<br/>"
+    $("#myli2").append(qty)
+
+    price = cart[i][2]+"<br/>"
+    $("myli3").append(price)
+}
